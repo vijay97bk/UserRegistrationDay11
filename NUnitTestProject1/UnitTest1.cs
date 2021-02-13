@@ -18,7 +18,7 @@ namespace NUnitTestProject
         [Test]
         public void GivenFirstNameExpectingTrueResult()
         {
-            string firstName = "dilip";
+            string firstName = "vijay";
             string actual = " ";
             try
             {
@@ -33,7 +33,7 @@ namespace NUnitTestProject
         [Test]
         public void GivenLastNameExpectingTrueResult()
         {
-            string lastName = "rathod";
+            string lastName = "kshirasagar";
             string actual = " ";
             try
             {
