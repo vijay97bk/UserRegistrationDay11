@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UserRegistrationDay11
+namespace UserRegistrationCustomeException
 {
     class Program
     {
