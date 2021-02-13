@@ -60,5 +60,20 @@ namespace NUnitTestProject
             }
 
         }
+        [Test]
+        public void MobileNumberExpectingTrueResult()
+        {
+            string mobileNumber = "91+ 9876543210";
+            string actual = " ";
+            try
+            {
+                actual = userRegistrationTest.MobileNumber(mobileNumber);
+            }
+            catch (UserRegistrationCustomeException exception)
+            {
+                Assert.AreEqual("mobile number is not valid", exception.Message);
+            }
+
+        }
     }
 }
