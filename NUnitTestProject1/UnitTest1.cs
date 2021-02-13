@@ -75,5 +75,35 @@ namespace NUnitTestProject
             }
 
         }
+        [Test]
+        public void PasswordRule1ExpectingTrueResult()//minimum 8 character
+        {
+            string PasswordRule1 = "abcde@1";
+            string actual = " ";
+            try
+            {
+                actual = userRegistrationTest.PasswordRule1(PasswordRule1);
+            }
+            catch (UserRegistrationCustomeException exception)
+            {
+                Assert.AreEqual("password rule1 is not valid", exception.Message);
+            }
+
+        }
+        [Test]
+        public void PasswordRule2ExpectingTrueResult()//Atleast 1 upperCase character
+        {
+            string PasswordRule2 = "abcde@123";
+            string actual = " ";
+            try
+            {
+                actual = userRegistrationTest.PasswordRule2(PasswordRule2);
+            }
+            catch (UserRegistrationCustomeException exception)
+            {
+                Assert.AreEqual("password rule2 is not valid", exception.Message);
+            }
+
+        }
     }
 }
