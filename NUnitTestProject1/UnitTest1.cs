@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using UserRegistrationException;
+using UserRegistrationDay11;
 namespace NUnitTestProject
 {
     public class Tests

@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "UserRegistrationDay11/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/UserRegistrationDay11.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UserRegistrationDay11.dll": {}
+        }
       }
     }
   },
@@ -4613,13 +4623,19 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "UserRegistrationDay11/1.0.0": {
+      "type": "project",
+      "path": "../UserRegistrationDay11/UserRegistrationDay11.csproj",
+      "msbuildProject": "../UserRegistrationDay11/UserRegistrationDay11.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "NUnit >= 3.12.0",
-      "NUnit3TestAdapter >= 3.16.1"
+      "NUnit3TestAdapter >= 3.16.1",
+      "UserRegistrationDay11 >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4648,7 +4664,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationDay11\\UserRegistrationDay11\\UserRegistrationDay11.csproj": {
+              "projectPath": "C:\\Users\\Vijay Kshirasagar\\Desktop\\C# Work\\UserRegistrationDay11\\UserRegistrationDay11\\UserRegistrationDay11.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
