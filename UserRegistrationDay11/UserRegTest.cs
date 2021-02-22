@@ -3,28 +3,26 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace UserRegistrationException
+namespace UserRegistrationDay11
 {
     public class UserRegistrationTest
     {
-        string firstNamePattern = "^[A-Z]{1}[a-zA-Z]{2,}$";
-
         public string FirstName(string firstName)
         {
 
-            Regex regex = new Regex(firstNamePattern);
+            Regex regex = new Regex(@"^[A-Z]{1}[a-zA-Z]{2,}$");
             var result = regex.Match(firstName);
             try
             {
                 if (!result.Success)
                 {
-                    throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.FIRST_NAME_MESSAGE, "first name is not valid");
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.FIRST_NAME_MESSAGE, "first name is not valid");
                 }
                 return "first name is valid";
             }
             catch
             {
-                throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.FIRST_NAME_MESSAGE, "first name is not valid");
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.FIRST_NAME_MESSAGE, "first name is not valid");
             }
 
         }
@@ -37,13 +35,13 @@ namespace UserRegistrationException
             {
                 if (!result.Success)
                 {
-                    throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.LAST_NAME_MESSAGE, "last name is not valid");
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.LAST_NAME_MESSAGE, "last name is not valid");
                 }
                 return "last name is valid";
             }
             catch
             {
-                throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.LAST_NAME_MESSAGE, "last name is not valid");
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.LAST_NAME_MESSAGE, "last name is not valid");
             }
 
         }
@@ -56,13 +54,13 @@ namespace UserRegistrationException
             {
                 if (!result.Success)
                 {
-                    throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.EMAIL_ID, "emailid is not valid");
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.EMAIL_ID, "emailid is not valid");
                 }
                 return "emailid is valid";
             }
             catch
             {
-                throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.EMAIL_ID, "emailid is not valid");
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.EMAIL_ID, "emailid is not valid");
             }
 
         }
@@ -75,13 +73,13 @@ namespace UserRegistrationException
             {
                 if (!result.Success)
                 {
-                    throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.MOBILE_NUMBER, "mobile number is not valid");
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.MOBILE_NUMBER, "mobile number is not valid");
                 }
                 return "mobile number is valid";
             }
             catch
             {
-                throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.MOBILE_NUMBER, "mobile number is not valid");
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.MOBILE_NUMBER, "mobile number is not valid");
             }
 
         }
@@ -94,13 +92,32 @@ namespace UserRegistrationException
             {
                 if (!result.Success)
                 {
-                    throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.PASSWORDRULES, "password rule1 is not valid");
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.PASSWORDRULES, "password rule1 is not valid");
                 }
                 return "password rule1 is valid";
             }
             catch
             {
-                throw new UserRegistrationCustomeException(UserRegistrationCustomeException.ExceptionType.PASSWORDRULES, "password rule1 is not valid");
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.PASSWORDRULES, "password rule1 is not valid");
+            }
+
+        }
+        public string PasswordRule2(string passwordRule2)
+        {
+            string passwordRule2Pattern = @"^(?=.*[A-Z]).{8,}$";
+            Regex regex = new Regex(passwordRule2Pattern);
+            var result = regex.Match(passwordRule2);
+            try
+            {
+                if (!result.Success)
+                {
+                    throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.PASSWORDRULES, "password rule2 is not valid");
+                }
+                return "password rule2 is valid";
+            }
+            catch
+            {
+                throw new UserRegrestrationCustomException(UserRegrestrationCustomException.ExceptionType.PASSWORDRULES, "password rule2 is not valid");
             }
 
         }
