@@ -24,9 +24,9 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.FirstName(firstName);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException ex)
             {
-                Assert.AreEqual("first name is not valid", exception.Message);
+                Assert.AreEqual("first name is not valid", ex.Message);
             }
 
         }
@@ -39,7 +39,7 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.LastName(lastName);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException exception)
             {
                 Assert.AreEqual("last name is not valid", exception.Message);
             }
@@ -54,7 +54,7 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.EmailId(emailid);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException exception)
             {
                 Assert.AreEqual("emailid is not valid", exception.Message);
             }
@@ -69,7 +69,7 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.MobileNumber(mobileNumber);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException exception)
             {
                 Assert.AreEqual("mobile number is not valid", exception.Message);
             }
@@ -84,7 +84,7 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.PasswordRule1(PasswordRule1);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException exception)
             {
                 Assert.AreEqual("password rule1 is not valid", exception.Message);
             }
@@ -99,7 +99,7 @@ namespace NUnitTestProject
             {
                 actual = userRegistrationTest.PasswordRule2(PasswordRule2);
             }
-            catch (UserRegistrationCustomeException exception)
+            catch (UserRegrestrationCustomException exception)
             {
                 Assert.AreEqual("password rule2 is not valid", exception.Message);
             }
